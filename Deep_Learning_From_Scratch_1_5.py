@@ -1,11 +1,11 @@
 import numpy as np
 
-x = np.array([1.0, 2.0, 3.0])
-print(x)
-type(x)
+x = np.array([1.0, 2.0, 3.0]) # 넘파이 배열 생성
+print(x)                      # 배열 출력
+type(x) 
 
-x = np.array([1.0, 2.0, 3.0])
-y = np.array([2.0, 4.0, 6.0])
+x = np.array([1.0, 2.0, 3.0]) 
+y = np.array([2.0, 4.0, 6.0]) 
 print(x + y)
 print(x - y)
 print(x * y)
@@ -31,5 +31,5 @@ print(X[0][1])
 X = X.flatten()         # 1차원 배열로 변환
 print(X)
 
-X[np.array([0, 2, 4])]  # X 배열의 0, 2, 4 인덱스의 원소 얻기
+print(X[np.array([0, 2, 4])])  # X 배열의 0, 2, 4 인덱스의 원소 얻기
 print(X [X > 15])       # 15이상인 값만 출력하기
