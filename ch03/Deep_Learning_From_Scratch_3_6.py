@@ -1,18 +1,10 @@
-import numpy as np
+import sys, os
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+from dataset.mnist import load_mnist
 
-a = np.array([0.3, 2.9, 4.0])
-exp_a = np.exp(a)
-print(exp_a)
+(x_train, t_train), (x_test, t_test) = load_mnist(flatten=True, normalize=False)
 
-sum_exp_a = np.sum(exp_a)
-print(sum_exp_a)
-
-y = exp_a / sum_exp_a
-print(y)
-
-def softmax(a):
-    exp_a = np.exp(a)
-    sum_exp_a = np.sum(exp_a)
-    y = exp_a / sum_exp_a
-
-    return y
+print(x_train.shape)  # (60000, 784)
+print(t_train.shape)  # (60000, )
+print(x_test.shape)   # (10000, 784)
+print(t_test.shape)   # (10000, )
